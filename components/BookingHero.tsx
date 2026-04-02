@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 export default function BookingHero() {
   return (
-    <div className='bg-[#D2F8DC] px-4 py-10 lg:px-20 lg:py-25 2xl:max-w-380 2xl:mx-auto '>
+    <div className='bg-[#D2F8DC] w-full mx-auto px-4 py-10 lg:px-20 lg:py-25 2xl:max-w-380 2xl:mx-auto '>
         <div className='max-w-6xl  flex flex-col lg:flex-row items-center gap-10 justify-between'>
-            <div className='flex justify-center'> 
+            <div className='w-full h-auto flex justify-center'> 
                
                 <Image src="/Clock.svg" alt='hero-image' width={350} height={350} priority />
                 
@@ -17,7 +17,7 @@ export default function BookingHero() {
 
             <div className='flex flex-col gap-6 text-start lg:text-left lg:items-start max-w-xl'>
                 <div>
-                    <TextReveal text={"Book an \n appointment now" }/>
+                    <TextReveal text={"Book an appointment now" }/>
                 </div>
                 <motion.div
                     initial={{ opacity: 0 }}

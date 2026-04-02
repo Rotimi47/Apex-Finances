@@ -4,14 +4,14 @@ import { Hero, HomeText, IRSAudit, TaxFilling, BookKeeping, Testimonials, Potrai
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-x-hidden">
       <Hero/>
       <HomeText/>
       <TaxFilling/>
       <IRSAudit/>
       <BookKeeping/>
       <Testimonials/>
-      <PotraitOne/>
+      <PotraitOne/> 
       <About/>
       <BrickLay/>
       <HomeTextTwo/>

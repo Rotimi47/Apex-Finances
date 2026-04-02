@@ -39,7 +39,7 @@ export default function Hero() {
                 > 
                     <Image src="/heroLg.svg" alt='hero-image' width={350} height={350} priority />
                 </motion.div>
-            </div>
+            </div> 
         </div>
     </div>
   )
