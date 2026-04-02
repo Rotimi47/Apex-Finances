@@ -18,6 +18,7 @@ import Onboarding from './Onboarding'
 import Philosophy from './Philosophy'
 import CalcTaxes from './CalcTaxes'
 import AOSInit from './AOSInit'
+import TextReveal from './TextReveal'
 
 
 export{ 
@@ -41,4 +42,5 @@ export{
     Philosophy,
     CalcTaxes,
     AOSInit,
+    TextReveal
 }

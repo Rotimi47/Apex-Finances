@@ -1,5 +1,6 @@
 import TestimonialSwiper from "./TestimonialSwiper";
 
 export {
-    TestimonialSwiper
+    TestimonialSwiper,
+  
 }

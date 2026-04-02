@@ -1,9 +1,15 @@
+'use client';
 import { CustomButtonProps } from "@/types";
-
+import { motion } from 'framer-motion';
 const Button = ({title, btnType, containerStyles, handleClick}:CustomButtonProps) => {
   return (
     <div>
-      <button
+      <motion.button
+          whileHover={{ 
+            scale: 1.1, 
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            //boxShadow: "0px 0px 8px rgb(255,255,255)",
+          }}
           disabled={false}
           type={btnType||"button"}
           className={`text-white rounded-4xl p-3 shadow-[0_0_20px_rgba(46,79,33,0.35)] ${containerStyles}`}
@@ -12,7 +18,7 @@ const Button = ({title, btnType, containerStyles, handleClick}:CustomButtonProps
           <span>
               {title}
           </span>
-      </button>
+      </motion.button>
      </div>
   )
 }

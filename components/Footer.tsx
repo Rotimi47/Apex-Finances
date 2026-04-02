@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="bg-[#2E4F21] w-full mx-auto flex flex-col gap-20 px-6 py-8 lg:gap-30">
+    <div className="bg-[#2E4F21] w-full mx-auto flex flex-col gap-20 px-6 py-8 lg:gap-30   2xl:max-w-380 2xl:mx-auto ">
         <div className="flex flex-col gap-20 lg:flex-row lg:gap-130">
             <div className="text-white text-2xl font-semibold"><Link href="/">Apex Finances</Link></div>
             <div className="flex justify-between items-center lg:gap-5">

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 export default function CalcTaxes() {
   return (
-    <div className='bg-[#F4F7F5] px-4 py-10 lg:px-20 lg:py-25 w-full'>
+    <div className='bg-[#F4F7F5] px-4 py-10 lg:px-20 lg:py-25 w-full 2xl:max-w-380 2xl:mx-auto'>
             <div className='max-w-6xl mx-auto  flex flex-col lg:flex-row-reverse items-center gap-10 justify-between'>
                 <div data-aos="flip-right" className='flex justify-center'> 
                    

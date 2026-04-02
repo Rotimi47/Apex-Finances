@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function IRSAudit() {
   return (
-    <section  data-aos="fade-left" className="flex justify-center pb-4 lg:justify-end lg:pb-6">
+    <section  data-aos="fade-left" className="flex justify-center pb-4 lg:justify-end lg:pb-6  2xl:max-w-380 2xl:mx-auto">
             <div className="bg-[#A0F1BD] w-full max-w-259 mx-4  px-4 py-10 rounded-lg flex flex-col lg:flex-row-reverse gap-18  lg:py-20 lg:pl-20 lg:pr-25">
                 <div>
                     <Image src="/chartBoard.svg" alt="image of a phone" width={350} height={350} priority/>

@@ -15,11 +15,11 @@ export default function Navbar() {
     };
 
   return (
-      <div className="bg-[#A0F1BD] "> 
-        <nav className="flex justify-between gap-4 p-4 items-center lg:px-20 ">
+      <div className=" "> 
+        <nav className="bg-[#A0F1BD] flex justify-between gap-4 p-4 items-center lg:px-20 2xl:max-w-380 2xl:mx-auto">
           <div className="text-[#2E4F21] text-xl font-semibold "><Link href="/">Apex Finances</Link></div>
           <div className="hidden lg:flex gap-5 items-center"> 
-            <Link className="text-[#2E4F21]" href="/services">Services</Link>
+            <Link className="text-[#2E4F21] hover:underline" href="/services">Services</Link>
             <Button
               title="Book an appointment"
               btnType='button'

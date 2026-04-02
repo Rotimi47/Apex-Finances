@@ -2,18 +2,23 @@
 import Button from './Button'
 import Image from 'next/image'
 import { motion } from "framer-motion";
+import TextReveal from './TextReveal';
 
 export default function Hero() {
   return (
-    <div className='bg-[#A0F1BD] px-4 py-10 lg:px-20 lg:py-25'>
+    <div className='bg-[#A0F1BD] px-4 py-10 lg:px-20 lg:py-25  2xl:max-w-380 2xl:mx-auto'>
         <div className='max-w-6xl  flex flex-col lg:flex-row items-center gap-10 justify-between'>
             <div className='flex flex-col gap-6 text-center lg:text-left lg:items-start items-center max-w-xl'>
                 <div>
-                    <h1 className='text-4xl text-[#2E4F21] lg:text-7xl lg:text-start'>Financial Clarity <br/> You Can Trust</h1>
+                    <TextReveal text="Financial Clarity You Can Trust" />
                 </div>
-                <div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.0, duration: 1.5 }}
+                >
                     <p className='text-[#2E4F21] '>Trusted financial guidance for every stage of life and business since 2000</p>
-                </div>
+                </motion.div>
                 <div>
                     <Button
                         title='Connect with our experts'
