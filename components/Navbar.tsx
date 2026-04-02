@@ -5,6 +5,7 @@ import {useState} from "react";
 import { useRouter } from "next/navigation";
 import { IconMenu3 } from "@tabler/icons-react";
 import { IconX } from "@tabler/icons-react";
+import { useEffect } from "react";
 
 export default function Navbar() {
   const router = useRouter();
@@ -14,9 +15,21 @@ export default function Navbar() {
         setMobileDrawerOpen(!mobileDrawerOpen);
     };
 
+     useEffect(() => {
+    const handleScroll = () => {
+      setMobileDrawerOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
       <div className=" "> 
-        <nav className="bg-[#A0F1BD] flex justify-between gap-4 p-4 items-center lg:px-20 2xl:max-w-380 2xl:mx-auto">
+        <nav className=" relative bg-[#A0F1BD] flex justify-between gap-4 p-4 items-center lg:px-20 2xl:max-w-380 2xl:mx-auto">
           <div className="text-[#2E4F21] text-xl font-semibold "><Link href="/">Apex Finances</Link></div>
           <div className="hidden lg:flex gap-5 items-center"> 
             <Link className="text-[#2E4F21] hover:underline" href="/services">Services</Link>
@@ -32,23 +45,26 @@ export default function Navbar() {
                     {mobileDrawerOpen ?<IconX/> : <IconMenu3/>}
                 </button>
           </div>
-            {mobileDrawerOpen &&  (
-                    <div className=" fixed bg-black/60 top-0 right-0 z-20  backdrop-blur-sm p-12 w-1/2  flex flex-col justify-center items-center lg:hidden">
-                       <ul>
-                         <li> <Link href="/services">Services</Link></li>
-                           <Button
-                              title="Book"
-                              btnType='button'
-                              containerStyles="bg-[#2E4F21] rounded-1xl"
-                              handleClick={() => router.push("/booking")}
-                            />
-                       </ul>
+           
+                    <div 
+                    className={ `lg:hidden absolute top-16 right-4 w-52 z-50 transition-all duration-300 ${
+                      mobileDrawerOpen 
+                       ? "opacity-100 translate-x-0 translate-y-0"
+                        : "opacity-0 translate-x-10  -translate-y-2 pointer-events-none" 
+                    }`}
+                    >
+                      <div className="bg-[#F4F7F5] items-center rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-5 flex flex-col gap-5 border border-white/10">
+                        <ul>
+                          <li> <Link  href="/services" onClick={() => setMobileDrawerOpen(false)}>Services</Link></li>
+                           <li> <Link href="/booking" onClick={() => setMobileDrawerOpen(false)}>Book Us</Link></li>
+                            
+                        </ul>
+                      </div>
                       
 
 
                     
-                       </div>
-                )}
+                    </div>
         </nav>
     </div>
   );
