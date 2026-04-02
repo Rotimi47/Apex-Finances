@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
-//import { AOSInit, Footer, Navbar } from "@/components";
-import { AOSInit } from "@/components";
+import { AOSInit, Footer, Navbar } from "@/components";
+
 
 
 
@@ -33,9 +33,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <AOSInit/>
-        {/* <Navbar/> */}
+         <Navbar/>  
         {children}
-        {/* <Footer/> */}
+         <Footer/> 
       </body>
         
     </html>

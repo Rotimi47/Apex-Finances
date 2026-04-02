@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
       <div className=" "> 
-        <nav className=" relative bg-[#A0F1BD] flex justify-between gap-4 p-4 items-center lg:px-20 2xl:max-w-380 2xl:mx-auto">
+        <nav className=" relative bg-[#A0F1BD] flex justify-between gap-4 p-4 items-center lg:px-20 max-w-7xl mx-auto">
           <div className="text-[#2E4F21] text-xl font-semibold "><Link href="/">Apex Finances</Link></div>
           <div className="hidden lg:flex gap-5 items-center"> 
             <Link className="text-[#2E4F21] hover:underline" href="/services">Services</Link>
@@ -41,30 +41,28 @@ export default function Navbar() {
             />
           </div>
           <div className='lg:hidden'>
-                <button onClick={toggleNavbar} className='sticky top-6 right-6 z-30'> 
+                <button onClick={toggleNavbar} className=''> 
                     {mobileDrawerOpen ?<IconX/> : <IconMenu3/>}
                 </button>
           </div>
            
-                    <div 
+                  <div 
                     className={ `lg:hidden absolute top-16 right-4 w-52 z-50 transition-all duration-300 ${
                       mobileDrawerOpen 
-                       ? "opacity-100 translate-x-0 translate-y-0"
-                        : "opacity-0 translate-x-10  -translate-y-2 pointer-events-none" 
+                       ? "opacity-100 translate-x-0 pointer-events-auto"
+                        : "opacity-0 translate-x-4  pointer-events-none" 
                     }`}
-                    >
-                      <div className="bg-[#F4F7F5] items-center rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-5 flex flex-col gap-5 border border-white/10">
-                        <ul>
-                          <li> <Link  href="/services" onClick={() => setMobileDrawerOpen(false)}>Services</Link></li>
-                           <li> <Link href="/booking" onClick={() => setMobileDrawerOpen(false)}>Book Us</Link></li>
+                  >
+                    <div className="bg-[#F4F7F5] items-center rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] p-5 flex flex-col gap-5 border border-white/10">
+                      <ul>
+                        <li> <Link  href="/services" onClick={() => setMobileDrawerOpen(false)}>Services</Link></li>
+                           
+                        <li> <Link href="/booking" onClick={() => setMobileDrawerOpen(false)}>Book Us</Link></li>
                             
-                        </ul>
-                      </div>
-                      
-
-
-                    
+                      </ul>
                     </div>
+                    
+                  </div>
         </nav>
     </div>
   );
