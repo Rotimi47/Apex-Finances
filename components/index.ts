@@ -19,6 +19,7 @@ import Philosophy from './Philosophy'
 import CalcTaxes from './CalcTaxes'
 import AOSInit from './AOSInit'
 import TextReveal from './TextReveal'
+import ChatSection from './ChatSection'
 
 
 export{ 
@@ -42,5 +43,6 @@ export{
     Philosophy,
     CalcTaxes,
     AOSInit,
-    TextReveal
+    TextReveal,
+    ChatSection,
 }

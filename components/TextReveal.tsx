@@ -40,7 +40,7 @@ export default function TextReveal({ text }: { text: string }) {
   return (
     <h1 ref={textRef} className="text-4xl text-[#2E4F21] lg:text-7xl lg:text-start">
       {text.split(" ").map((word, i) => (
-        <span key={i} className="inline-block pr-2 overflow-hidden">
+        <span key={i} className="inline-block  overflow-hidden">
           <span className="word inline-block">{word}&nbsp;</span>
         </span>
       ))}

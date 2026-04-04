@@ -1,7 +1,11 @@
-import { BookingHero } from "@/components";
+import { BookingHero, ChatSection } from "@/components";
+
 
 export default function Booking() {
   return (
-    <BookingHero/>
+    <div> 
+      <BookingHero/>
+      <ChatSection/>
+    </div>
   )
 }
